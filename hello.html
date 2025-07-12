@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Balance</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #1e1e1e, #2c2c2c);
+      color: #fff;
+      overflow: hidden;
+      font-size: 18px;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 10;
+    }
+
+    /* Bubble Heading Effect */
+    .heading {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ff8c00, #ff0080);
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: bubble 3s ease-in-out infinite;
+    }
+
+    @keyframes bubble {
+      0% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-15px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+    }
+
+    /* Modern, Clean, and Big Text for Balance */
+    .balance {
+      font-size: 6rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 20px 0;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: shine 1.5s ease infinite;
+    }
+
+    /* Shine animation for balance text */
+    @keyframes shine {
+      0% {
+        background-position: -200% 0;
+      }
+      100% {
+        background-position: 200% 0;
+      }
+    }
+
+    /* Stylish Button with Hover Effect */
+    .btn {
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      background: #0072ff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      outline: none;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: #00c6ff;
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    /* Background animation */
+    @keyframes backgroundAnimation {
+      0% {
+        background: linear-gradient(45deg, #1e1e1e, #2c2c2c);
+      }
+      50% {
+        background: linear-gradient(45deg, #4e4376, #2b5876);
+      }
+      100% {
+        background: linear-gradient(45deg, #1e1e1e, #2c2c2c);
+      }
+    }
+
+    body {
+      animation: backgroundAnimation 10s ease infinite;
+    }
+
+    /* Outer Glow Effect for balance box */
+    .glowing-box {
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(0, 0, 255, 0.7), 0 0 50px rgba(0, 0, 255, 0.5);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .glowing-box:hover {
+      box-shadow: 0 0 80px rgba(0, 0, 255, 1), 0 0 120px rgba(0, 0, 255, 0.8);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Bubble Heading -->
+    <div class="heading">Inc Bubble Liquidity</div>
+
+    <div class="glowing-box">
+      <div class="balance">
+        $91,234.795629 Trillion
+      </div>
+      <button class="btn">View More</button>
+    </div>
+  </div>
+</body>
+</html>
